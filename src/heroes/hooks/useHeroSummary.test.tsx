@@ -163,5 +163,12 @@ describe('useHeroSummary', () => {
     });
 
     expect(result.current.error).toBeDefined();
+    expect(result.current.isLoading).toBe(false);
+
+    expect(result.current.isLoading).toBeFalsy();
+    expect(mockGetSummaryAction).toHaveBeenCalled();
+
+    expect(result.current.error?.message).toBe('Faild to fetch summary');
+    //expect(mockGetSummaryAction).toHaveBeenCalledTimes(1);
   });
 });
