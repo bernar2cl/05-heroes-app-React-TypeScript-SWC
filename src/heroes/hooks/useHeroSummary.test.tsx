@@ -149,7 +149,7 @@ describe('useHeroSummary', () => {
     // });
   });
 
-  test('should return error state when API call fails', async () => {
+  test('should return error state when API call fails .', async () => {
     const mockError = new Error('Faild to fetch summary');
     mockGetSummaryAction.mockRejectedValue(mockError);
 
@@ -162,6 +162,6 @@ describe('useHeroSummary', () => {
       expect(result.current.isError).toBeTruthy();
     });
 
-    console.log(result);
+    expect(result.current.error).toBeDefined();
   });
 });
