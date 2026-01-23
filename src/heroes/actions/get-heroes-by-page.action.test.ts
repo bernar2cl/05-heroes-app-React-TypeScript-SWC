@@ -71,7 +71,7 @@ describe('getHeroesByPageAction', () => {
 
     expect(params).toStrictEqual({ limit: 6, offset: 24, category: 'all' });
   });
-  test('should call the api with correct params', async () => {
+  test('should call the api with correct params ->', async () => {
     const responseObject = {
       total: 10,
       pages: 1,
