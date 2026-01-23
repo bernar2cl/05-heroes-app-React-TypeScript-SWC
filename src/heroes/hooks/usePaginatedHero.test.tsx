@@ -72,7 +72,7 @@ describe('usePaginatedHero', () => {
 
     expect(mockGetHeroesByPageAction).toHaveBeenCalledWith(1, 6, 'all');
   });
-  test('should call getHeroesByPageAction with arguments', async () => {
+  test('should call getHeroesByPageAction with arguments.', async () => {
     const mockHeroesData = {
       total: 20,
       pages: 4,
