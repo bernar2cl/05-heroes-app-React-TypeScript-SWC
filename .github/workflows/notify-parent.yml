@@ -1,0 +1,31 @@
+name: 🔔 Notify Parent Repository
+
+on:
+  push:
+    branches:
+      - '**' # 👈 se ejecuta en cualquier rama (main, master, develop, feature/*, etc.)
+
+jobs:
+  trigger-parent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔗 Notify parent repository
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          # 🔐 Token del repo principal (PARENT_REPO_TOKEN)
+          token: ${{ secrets.PARENT_REPO_TOKEN }}
+
+          # 📦 Nombre del repositorio principal
+          repository: bernar2cl/Proyectos-React-TypeScript
+
+          # 🧩 Tipo de evento personalizado que escuchará el repo principal
+          event-type: submodule-updated
+
+          # 💬 Información opcional para enviar al repo principal
+          client-payload: >
+            {
+              "submodule": "${{ github.repository }}",
+              "branch": "${{ github.ref_name }}",
+              "commit": "${{ github.sha }}"
+            }
