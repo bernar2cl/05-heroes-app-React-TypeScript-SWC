@@ -43,7 +43,7 @@ describe('useHeroSummary', () => {
     expect(result.current.data).toBeUndefined();
   });
 
-  test('should return success state with data when API call successds', async () => {
+  test('should return success state with data when API call successds.', async () => {
     const mockSummaryData = {
       totalHeroes: 10,
       strongestHero: {
