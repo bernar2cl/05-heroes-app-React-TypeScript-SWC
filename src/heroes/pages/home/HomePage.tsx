@@ -18,7 +18,7 @@ export const HomePage = () => {
   const activeTab = searchParams.get('tab') ?? 'all';
   const page = searchParams.get('page') ?? '1';
   const limit = searchParams.get('limit') ?? '6';
-  const category = searchParams.get('category') ?? 'aa';
+  const category = searchParams.get('category') ?? 'all';
 
   const selectTab = useMemo(() => {
     const validTabs = ['all', 'favorites', 'heroes', 'villains'];

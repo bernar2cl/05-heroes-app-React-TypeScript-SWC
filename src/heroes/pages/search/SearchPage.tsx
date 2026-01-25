@@ -22,14 +22,7 @@ export const SearchPage = () => {
         title="Búsqueda de SuperHéroes"
         description="Descubre, explora y administra super héroes"
       />
-      <CustomBreadcrumbs
-        currentPage="Buscador de Héroes"
-        // breadcrumb={[
-        //   { label: 'Home1', to: '/' },
-        //   { label: 'Home2', to: '/' },
-        //   { label: 'Home3', to: '/' },
-        // ]}
-      />
+      <CustomBreadcrumbs currentPage="Buscador de Héroes" />
 
       {/* State Dashboard */}
       <HeroStats />
