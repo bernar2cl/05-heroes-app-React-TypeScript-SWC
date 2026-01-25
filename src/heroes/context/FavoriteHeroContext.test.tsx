@@ -1,6 +1,6 @@
 import { use } from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, test, expect, vi, beforeEach } from 'vitest';
+import { describe, test, expect, beforeEach } from 'vitest';
 import {
   FavoriteHeroContext,
   FavoriteHeroProvider,

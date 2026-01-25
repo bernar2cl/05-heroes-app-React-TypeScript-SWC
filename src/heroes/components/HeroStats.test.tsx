@@ -135,7 +135,7 @@ describe('HeroStats', () => {
   test('should change the percentage of favorite when a hero is added to favorites', () => {
     localStorage.setItem('favorites', JSON.stringify([mockHero]));
 
-    const { container } = renderHeroStats(mockSummaryData);
+    renderHeroStats(mockSummaryData);
 
     //screen.debug();
 
